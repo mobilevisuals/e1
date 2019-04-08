@@ -88,17 +88,5 @@ public class FlightTicket {
         return travelClassOptions;
     }
 
-    public void newMessage() {
-        if (getFirstName().equalsIgnoreCase("solna")) {
-            FacesMessage javaTextMsg = new FacesMessage(FacesMessage.SEVERITY_INFO,
-                    "Good Job, that is the correct answer!", null);
-            FacesContext.getCurrentInstance().addMessage("guessForm:gText", javaTextMsg);
-        } else {
-            FacesMessage javaTextMsg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
-                    "Sorry, that is NOT the correct answer!", null);
-            //lägger i meddelandet i nestade gText, som finna i formuläret guessForm
-            FacesContext.getCurrentInstance().addMessage("guessForm:gText", javaTextMsg);
-        }
-    }
 
 }
